@@ -1,4 +1,5 @@
-﻿<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+﻿
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
   <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
     <StackLayout row="0" class="nt-drawer__header">
       <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
@@ -51,6 +52,39 @@
           <Label col="0" text="&#xf013;" class="nt-icon fas"></Label>
           <Label col="1" text="Settings" class="p-r-10"></Label>
         </GridLayout>
+
+        <StackLayout class="hr"></StackLayout>
+
+        <Label
+          text="HERRAMIENTAS"
+          class="nt-drawer__header-footnote p-l-15 p-t-10"
+        ></Label>
+
+        <GridLayout columns="auto, *" class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sharing/text')"
+          (tap)="onNavItemTap('/sharing/text')">
+          <Label col="0" text="&#xf1d8;" class="nt-icon fas"></Label>
+          <Label col="1" text="Compartir texto" class="p-r-10"></Label>
+        </GridLayout>
+
+        <GridLayout columns="auto, *" class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/sharing/image')"
+          (tap)="onNavItemTap('/sharing/image')">
+          <Label col="0" text="&#xf03e;" class="nt-icon fas"></Label>
+          <Label col="1" text="Compartir imagen" class="p-r-10"></Label>
+        </GridLayout>
+        <GridLayout columns="auto, *" class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/camera')"
+          (tap)="onNavItemTap('/camera')">
+          <Label col="0" text="&#xf030;" class="nt-icon fas"></Label>
+          <Label col="1" text="Cámara" class="p-r-10"></Label>
+        </GridLayout>
+        <GridLayout columns="auto, *" class="nt-drawer__list-item"
+          [class.-selected]="isComponentSelected('/maps')"
+          (tap)="onNavItemTap('/maps')">
+          <Label col="0" text="&#xf279;" class="nt-icon fas"></Label>
+          <Label col="1" text="Google Maps" class="p-r-10"></Label>
+        </GridLayout>
       </StackLayout>
     </ScrollView>
   </GridLayout>
@@ -59,3 +93,4 @@
     <page-router-outlet></page-router-outlet>
   </GridLayout>
 </RadSideDrawer>
+

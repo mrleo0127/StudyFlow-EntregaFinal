@@ -12,12 +12,33 @@ const routes: Routes = [
   { path: 'browse', loadChildren: () => import('~/app/browse/browse.module').then((m) => m.BrowseModule) },
   { path: 'search', loadChildren: () => import('~/app/search/search.module').then((m) => m.SearchModule) },
   { path: 'tasks', loadChildren: () => import('~/app/tasks/tasks.module').then((m) => m.TasksModule) },
+  {
+  path: 'maps',
+  loadChildren: () =>
+    import('./maps/maps.module').then(
+      (m) => m.MapsModule
+    ),
+},
   { path: 'settings', loadChildren: () => import('~/app/settings/settings.module').then((m) => m.SettingsModule) },
   {
   path: 'favorites',
   loadChildren: () =>
     import('./favorites/favorites.module').then(
       (m) => m.FavoritesModule
+    ),
+},
+{
+  path: 'sharing',
+  loadChildren: () =>
+    import('./sharing/sharing.module').then(
+      (m) => m.SharingModule
+    ),
+},
+{
+  path: 'camera',
+  loadChildren: () =>
+    import('./camera/camera.module').then(
+      (m) => m.CameraModule
     ),
 },
 ]

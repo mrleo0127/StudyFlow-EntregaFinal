@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome Headless 156.0.0.0 (Windows 10)" package="StudyFlow Tests" timestamp="2026-11-02T23:53:15" id="0" hostname="DESKTOP-TJUA3SO" tests="4" errors="0" failures="0" time="0.004">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"/>
+  </properties>
+  <testcase name="readingReducer debe agregar un recurso a la lista" time="0.003" classname=".readingReducer"/>
+  <testcase name="readingReducer debe eliminar un recurso de la lista" time="0" classname=".readingReducer"/>
+  <testcase name="readingReducer debe retornar el estado inicial" time="0.001" classname=".readingReducer"/>
+  <testcase name="readingReducer no debe agregar recursos duplicados" time="0" classname=".readingReducer"/>
+  <system-out>
+    <![CDATA[
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

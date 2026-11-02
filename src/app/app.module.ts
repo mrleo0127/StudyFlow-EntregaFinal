@@ -1,6 +1,6 @@
 
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core'
-
+import { GoogleMapsModule } from '@nativescript/google-maps/angular'
 import {
   NativeScriptModule,
   NativeScriptHttpClientModule,
@@ -22,6 +22,7 @@ import { readingReducer } from './store/reading.reducer'
     AppRoutingModule,
     NativeScriptModule,
     NativeScriptHttpClientModule,
+    GoogleMapsModule,
     NativeScriptUISideDrawerModule,
 
     StoreModule.forRoot({
