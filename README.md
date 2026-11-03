@@ -12,7 +12,7 @@ La aplicación incluye las siguientes características:
 - **Notificaciones push:** integración con Firebase Cloud Messaging para recibir notificaciones.
 - **Mensajes emergentes:** visualización de notificaciones mediante Toast.
 - **Compartir texto:** permite compartir contenido con otras aplicaciones.
-- **Compartir imágenes:** permite seleccionar imágenes y compartirlas.
+- **Compartir imágenes:** permite compartir imágenes con otras aplicaciones.
 - **Cámara:** permite tomar fotografías utilizando la cámara del dispositivo.
 - **Compartir fotografías:** permite compartir las imágenes tomadas desde la aplicación.
 - **Google Maps:** visualización de mapas de Google con un marcador de ubicación.
@@ -42,6 +42,7 @@ Para instalar y ejecutar el proyecto se necesita:
 - Java Development Kit (JDK 21).
 - Android Studio.
 - Android SDK y herramientas de plataforma.
+- Google Chrome para ejecutar las pruebas con Chrome Headless.
 - Un dispositivo Android físico o un emulador configurado.
 
 La ejecución local para Android requiere tener configurado correctamente el entorno de desarrollo de NativeScript.
@@ -62,13 +63,29 @@ git clone https://github.com/mrleo0127/StudyFlow-EntregaFinal.git
 cd StudyFlow-EntregaFinal
 ```
 
-### 3. Instalar las dependencias
+### 3. Instalar NativeScript CLI
+
+Si todavía no está instalado, ejecutar:
+
+```bash
+npm install -g nativescript
+```
+
+### 4. Instalar las dependencias
 
 ```bash
 npm install
 ```
 
 Este comando instala las dependencias definidas en `package.json`.
+
+### 5. Comprobar el entorno
+
+```bash
+ns doctor android
+```
+
+Este comando permite comprobar la configuración del entorno de desarrollo para Android.
 
 ## Ejecución en Android
 
@@ -103,7 +120,7 @@ Para utilizar una configuración propia:
 
 Para probar las notificaciones, ejecutar la aplicación en un dispositivo Android y enviar un mensaje desde Firebase Console.
 
-**Importante:** no compartir públicamente los tokens FCM de los dispositivos ni credenciales privadas.
+**Importante:** no compartir públicamente los tokens FCM de los dispositivos ni credenciales privadas. Las claves de API deben contar con las restricciones de seguridad correspondientes.
 
 ## Configuración de Google Maps
 
@@ -180,6 +197,7 @@ StudyFlow/
 │   │   ├── services/
 │   │   │   └── notification.service.ts
 │   │   └── store/
+│   │       ├── reading.reducer.ts
 │   │       └── reading.reducer.spec.ts
 │   └── main.ts
 ├── karma.conf.js
@@ -188,9 +206,3 @@ StudyFlow/
 ├── tsconfig.json
 ├── tsconfig.spec.json
 └── nativescript.config.ts
-```
-
-## Autor
-
-Proyecto académico desarrollado para la asignatura **Programación de Aplicaciones Móviles**.
-
